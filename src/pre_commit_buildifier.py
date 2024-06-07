@@ -20,6 +20,9 @@ def get_processor():
     if platform.processor().lower() in ["arm", "aarch64"]:
         return "arm64"
 
+    if platform.machine().lower() in ["aarch64"]:
+        return "arm64"
+
     raise NotImplementedError(f"Target CPU/OS is not supported: {platform.machine()}")
 
 
