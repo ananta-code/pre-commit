@@ -14,6 +14,11 @@ logging.root.name = "pre-commit-buildifier"
 
 
 def get_processor():
+    print("----")
+    print(platform.processor())
+    print("----")
+    print(platform.machine())
+    print("----")
     if platform.machine().lower() in ["amd64", "x86_64"]:
         return "amd64"
 
